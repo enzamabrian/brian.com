@@ -1,0 +1,546 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+button
+{
+    font-family: 'poppins', sans-serif;
+    border-radius: 10px;
+}
+
+header{
+    display: flex;
+    width: 80%;
+    height: 15vh;
+    align-items: center;
+    margin: auto;
+}
+.logo-container img{
+    width: 40px;
+
+}
+
+.logo-container, .nav-links, .cart{
+    display: flex;
+    
+}
+.background
+{
+    display: none;
+}
+#er
+{
+    display: none;
+}
+.logo-container h1{
+    font-weight: 1000;
+    margin: 5px;
+    font-size: 25px;
+    padding: 10px;
+}
+.logo-container h1 span
+{
+    color: #c36cbb;
+    font-weight: 400;
+}
+.logo-container{
+   
+    flex: 1;
+    animation: drop2 1.5s ease;
+    
+}
+
+
+nav{
+    
+    flex: 2;
+
+}
+
+.closebtn
+{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 0;
+    color: #c36cbb;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 2px 11px 2px 11px;
+    border: 1px solid #c36cbb;
+    border-radius: 6px;
+    display: none;
+    
+   
+}
+.nav-links{
+    justify-content: space-around;
+    list-style-type: none;
+}
+.nav-link
+{
+    color: #5f5f79;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+
+.nav-link::after{
+    content: '';
+    width: 0%;
+    height: 4px;
+    background: #c36cbb;
+    display: block;
+    border-radius: 200px;
+    margin: auto;
+    transition: .5s;
+}
+
+.nav-link:hover::after{
+    width: 100%;
+}
+.cart
+{
+    
+    flex: 1;
+    justify-content: flex-end;
+}
+
+
+
+
+.presentation
+{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    min-height: 85vh;
+    align-items: center;
+}
+.introduction
+{
+    flex: 2;
+    animation: drop2 1.5s ease;
+}
+.intro-text h1
+{
+    font-size: 44px;
+    font-weight: 600;
+    background: linear-gradient(to right, #c36cbb, #eeb9e8,#f5e5f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.intro-text p{
+    margin-top: 10px;
+    font-size: 22px;
+    color: #585772;
+}
+.cta{
+    padding: 50px 0px 0px 0px;
+}
+.cta-select
+{
+    border: 1px solid #c36cbb;
+    background: transparent;
+    color: #c36cbb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.cta-select:hover
+{
+    background: #c36cbb;
+    border: none;
+    color: white;
+    transition: .6s ease-in;
+
+}
+.cta-add:hover
+{
+    background: transparent;
+    border: 1px solid #c36cbb;
+    color: #c36cbb;
+    transition: .6s ease-in;
+
+}
+.cta-add
+{
+    background: #c36cbb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 17px;
+    color: white;
+    border: none;
+    margin: 30px 0px 0px 30px;
+}
+.cover img{
+    height: 60vh;
+    animation: drop 1.5s ease;
+    
+}
+.cover{
+    flex: 1;
+    
+}
+.dot1
+{
+    background: #f3e2f1;
+    outline: none;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    z-index: -100;
+    
+}
+
+.dot2
+{
+    border: 1px solid #f6e3f4;
+    outline: none;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    z-index: -110;
+    animation: r 10s ease-in;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes r {
+    0%
+    {
+        height: 350px;
+        width: 350px;
+    }
+    50%
+    {
+        height: 450px;
+        width: 450px;
+    }
+    100%
+    {
+        height: 350px;
+        width: 350px;
+    }
+
+    
+}
+@keyframes x {
+    0%
+    {
+        height: 500px;
+        width: 500px;
+    }
+    50%
+    {
+        height: 600px;
+        width: 600px;
+    }
+    100%
+    {
+        height: 500px;
+        width: 500px;
+    }
+
+    
+}
+.dot3
+{
+    border: 1px solid #f6e3f4;
+    animation: x 8s ease-in;
+    animation-iteration-count: infinite;
+    outline: none;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    position: absolute;
+    top: 275px;
+    right: 275px;
+    z-index: -110;
+    
+}
+
+@keyframes drop {
+
+    0%
+    {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}
+
+@keyframes drop2 {
+
+    0%
+    {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.openbtn
+{
+    font-size:20px;
+    position:absolute;
+    right: 20px;
+    border: 1px solid #c36cbb;
+    color: #c36cbb;
+    padding: 2px 11px 2px 11px;
+    border: 1px solid #c36cbb;
+    border-radius: 6px;
+    display: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px){
+    .presentation
+    {
+        width: 85%;
+    }
+    .header
+    {
+        width: 100%
+    }
+   
+    .intro-text h1{
+        font-size: 30px;
+    }
+    .intro-text p{
+        font-size: 18px;
+    }
+    .cover img{
+        height: 50vh;
+        animation: drop 1.5s ease;
+    }
+    .logo-container h1{
+        font-weight: 1000;
+        margin: 5px;
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 750px){
+
+    .cta-add
+    {
+        background: #c36cbb;
+        width: 130px;
+        height: 40px;
+        cursor: pointer;
+        font-size: 17px;
+        color: white;
+        border: none;
+        margin: 20px 0px 0px 20px;
+    }
+    #er
+{
+    display: block;
+}
+    .background
+{
+    display: block;
+}
+    .intro-text h1
+    {
+        font-size: 25px;
+    }
+    .intro-text p{
+        font-size: 15px;
+    }
+    .cta-select
+{
+    border: 1px solid #c36cbb;
+    background: transparent;
+    color: #c36cbb;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.presentation
+    {
+        width: 90%;
+        padding-top: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta{
+        padding: 10px 0px 0px 0px;
+    }
+    .cover img{
+        height: 40vh;
+        animation: drop 1.5s ease;
+        
+        
+    }
+    .logo-container h1{
+        font-weight: 1000;
+        margin: 5px;
+        font-size: 20px;
+        padding: 10px;
+    }
+    .logo-container h1 span
+    {
+        color: #c36cbb;
+        font-weight: 400;
+    }
+    .nav-links{
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #f4e9f3;;
+        width: 100%;
+        z-index: 100;
+        padding: 10px;
+        text-align: center;
+        animation: navdrop .5s ease-in;
+
+    }
+.background
+{
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    opacity: .1;
+    z-index: -20;
+    animation: big 5s ease;animation-iteration-count: infinite;
+
+}
+
+@keyframes big {
+    0%
+    {
+        opacity: 0;
+    }
+    
+    50%
+    {
+        opacity: .3;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+    
+}
+
+    .nav-links .nav-link{
+        margin: 0px 12px 12px 0px;
+    } 
+.nav-links .nav-link::after{
+    content: '';
+    width: 0%;
+    height: 4px;
+    background: #c36cbb;
+    display: block;
+    border-radius: 200px;
+    margin: auto;
+    transition: .5s;
+}
+
+.nav-links .nav-link:hover::after{
+    width: 30%;
+}
+.closebtn
+{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 0;
+    color: #c36cbb;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 2px 11px 2px 11px;
+    border: 1px solid #c36cbb;
+    border-radius: 6px;
+    display: block;
+    
+   
+}
+.openbtn
+{
+    font-size:20px;
+    position:absolute;
+    right: 20px;
+    border: 1px solid #c36cbb;
+    color: #c36cbb;
+    padding: 2px 11px 2px 11px;
+    border: 1px solid #c36cbb;
+    border-radius: 6px;
+    display: block;
+    cursor: pointer;
+
+}
+@keyframes navdrop {
+    0%{
+        top: 40px;
+        opacity: 0;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+    
+}
+
+}
