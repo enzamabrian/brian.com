@@ -134,7 +134,7 @@ nav{
 {
     font-size: 44px;
     font-weight: 600;
-    background: linear-gradient(to right, #c36cbb, #eeb9e8,#f5e5f3);
+    background: linear-gradient(to right, #c36cbb, #25d4eb,#f5e5f3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -142,6 +142,11 @@ nav{
     margin-top: 10px;
     font-size: 22px;
     color: #585772;
+}
+#intro
+{
+    font-size: 20px;
+    color: #c36cbb;
 }
 .cta{
     padding: 50px 0px 0px 0px;
@@ -184,7 +189,7 @@ nav{
     margin: 30px 0px 0px 30px;
 }
 .cover img{
-    height: 60vh;
+    height: 80vh;
     animation: drop 1.5s ease;
     
 }
@@ -200,8 +205,8 @@ nav{
     width: 200px;
     border-radius: 50%;
     position: absolute;
-    top: -40px;
-    right: -40px;
+    top: 0;
+    right: 0;
     z-index: -100;
     
 }
@@ -311,10 +316,77 @@ nav{
     border: 1px solid #c36cbb;
     color: #c36cbb;
     padding: 2px 11px 2px 11px;
-    border: 1px solid #c36cbb;
+    border: 1px solid rgb(194, 107, 186);
     border-radius: 6px;
     display: none;
 
+}
+
+.music-categories
+{
+    display: flex;
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+    min-height: 30vh;
+    margin-top: 100px;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: .3px .3px 40px rgba(194, 107, 186,0.3);
+}
+
+.music-categories .logo-container1
+{
+    flex: 1.2;
+    
+}
+.music-categories .logo-container1 img{
+    width: 70%;
+}
+    
+
+
+
+.music-categories .description
+{
+    flex: 2;
+    justify-content: space-around;
+    padding: 20px;
+    font-size: 19px;
+    
+}
+.music-categories .description h1
+{
+    font-size: 34px;
+    background: linear-gradient(to right, #c36cbb, #25d4eb,#f5e5f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+.music-categories .description .d
+{
+    font-size: 34px;
+    background: linear-gradient(to right,#ada5ac,#25d4eb,#c36cbb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.music-categories .description p{
+    font-weight: 400;
+    color: #757373;
+}
+.music-categories .btns
+{
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+}
+.btns .cta-add{
+    margin: 30px 0px 0px 30px;
+}
+.btns .cta-select{
+    margin: 0px 0px 0px 30px;
 }
 
 
@@ -338,8 +410,45 @@ nav{
 
 
 
+@media screen and (max-width: 1200px){
+    .btns .cta-add{
+        margin: 0px 0px 0px 10px;
+    }
+    .btns .cta-select{
+        margin: 0px 0px 0px 0px;
+    }
+.music-categories
+{
+    flex-direction: column;
+    width: 60%;
+}
+.music-categories .description
+{
+    font-size: 18px;
+}
+.music-categories .logo-container1 img{
+    width: 10%;
+    display: none;
+}
 
-
+.music-categories .description h1
+{
+font-size: 27px;
+background: linear-gradient(to right, #c36cbb, #25d4eb,#f5e5f3);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-bottom: 20px;
+align-items: center;
+}
+.music-categories .description .d
+{
+font-size: 27px;
+background: linear-gradient(to right,#ada5ac,#25d4eb,#c36cbb);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-bottom: 20px;
+}
+}
 
 
 
@@ -377,6 +486,8 @@ nav{
     }
 }
 
+
+
 @media screen and (max-width: 750px){
 
     .cta-add
@@ -385,11 +496,24 @@ nav{
         width: 130px;
         height: 40px;
         cursor: pointer;
-        font-size: 17px;
+        font-size: 15px;
         color: white;
         border: none;
+        border-radius: 6px;
         margin: 20px 0px 0px 20px;
     }
+    .music-categories
+{
+    flex-direction: column;
+    width: 70%;
+}
+
+    .cta-select{
+        border-radius: 6px;
+
+    }
+ 
+
     #er
 {
     display: block;
@@ -400,10 +524,14 @@ nav{
 }
     .intro-text h1
     {
-        font-size: 25px;
+        font-size: 28px;
+        margin-bottom: 80px;
     }
     .intro-text p{
-        font-size: 15px;
+        font-size: 17px;
+    }
+    .cta{
+        margin-top: 60px;
     }
     .cta-select
 {
@@ -417,7 +545,7 @@ nav{
 }
 .presentation
     {
-        width: 90%;
+        width: 80%;
         padding-top: 30px;
         flex-direction: column;
         text-align: center;
@@ -542,5 +670,73 @@ nav{
     }
     
 }
+.cover img{
+    height: 60vh;
+    animation: dro 1.5s ease;
+    margin-top: -350px;
+    position: absolute;
+    z-index: -45;
+    opacity: .4;
+   
+    
+}
+@keyframes dro {
+
+    0%
+    {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100%
+    {
+        opacity: .4;
+        transform: translateY(0px);
+    }
+    
+}
+
+}
+
+@media screen and (max-width: 550px){
+    .music-categories
+    {
+        flex-direction: column;
+        width: 85%;
+    }
+}
+@media screen and (max-width: 490px){
+    .btns .cta-add{
+        margin: 15px 0px 0px 0px;
+    }
+    .btns .cta-select{
+        margin: 0px 0px 0px 0px;
+    }
+
+    .music-categories
+    {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .music-categories .description h1
+{
+font-size: 24px;
+}
+
+.music-categories .description .d
+{
+font-size: 24px;
+
+}
+.intro-text p{
+    font-size: 13px;
+}
+.music-categories
+{
+    
+    margin-top: 40px;
+   
+}
+
 
 }
